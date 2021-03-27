@@ -1,0 +1,17 @@
+name: 'Netlify A11y'
+description: 'Run axe on netlify preview deploy'
+inputs:
+  site:
+    description: 'Netlify site name'
+    required: true
+  timeout:
+    description: 'Max timeout for the action (in seconds)'
+    required: false
+outputs:
+  url:
+    description: 'Netlify deploy preview link'
+  log:
+    description: 'Accessibility report from running axe'
+runs:
+  using: 'node12'
+  main: 'index.js'
